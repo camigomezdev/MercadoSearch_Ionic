@@ -9,13 +9,16 @@ import { HttpModule } from '@angular/http';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListProductPage } from "../pages/list-product/list-product";
+import { ProductoPage } from "../pages/producto/producto";
+
 import { MercadoLibreProvider } from '../providers/mercado-libre/mercado-libre';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListProductPage
+    ListProductPage,
+    ProductoPage
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,8 @@ import { MercadoLibreProvider } from '../providers/mercado-libre/mercado-libre';
   entryComponents: [
     MyApp,
     HomePage,
-    ListProductPage
+    ListProductPage,
+    ProductoPage
   ],
   providers: [
     StatusBar,

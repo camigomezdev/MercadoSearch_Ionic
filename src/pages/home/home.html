@@ -8,14 +8,15 @@
 
 <ion-content padding text-center>
 
-
+  <img src="../../assets/img/mercadoLibre.png">
   <ion-list>
     <ion-item>
       <ion-label stacked>Producto</ion-label>
       <ion-input type="text" [(ngModel)]="product"></ion-input>
     </ion-item>
   </ion-list>
-  <button ion-button color="secondary" block [navPush]="productList" [navParams]="{product: product}">Search</button>
-
+  <button ion-button color="dark" round block
+          [navPush]="productList"
+          [navParams]="{product: product}">Search</button>
 
 </ion-content>
