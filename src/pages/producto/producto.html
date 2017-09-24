@@ -16,25 +16,28 @@
 <ion-content padding>
 
   <ion-card>
-  <ion-card-content>
+    <ion-card-content>
 
-    <ion-item text-wrap>
-      <ion-thumbnail item-start>
-        <img *ngIf="producto.thumbnail; else imgML" [src]="producto.thumbnail">
-      </ion-thumbnail>
-      <h2><strong>{{producto.title}}</strong></h2>
-    </ion-item>
+      <ion-item text-wrap>
+        <ion-thumbnail item-start>
+          <img *ngIf="producto.thumbnail; else imgML" [src]="producto.thumbnail">
+        </ion-thumbnail>
+        <h2><strong>{{producto.title}}</strong></h2>
+      </ion-item>
 
-    <p>Precio: {{producto.price | currency:'USD':true:'1.2-2'}}</p>
-    <p>Condicion: {{producto.condition}}</p>
-    <p *ngIf="producto.original_price">Precio original: {{producto.original_price | currency:'USD':true}}</p>
-    <p>Cantidad vendida: {{producto.sold_quantity}}</p>
-    <p>Stock: {{producto.available_quantity}}</p>
+      <p>Precio: {{producto.price | currency:'USD':true:'1.2-2'}}</p>
+      <p>Condicion: {{producto.condition}}</p>
+      <p *ngIf="producto.original_price">Precio original: {{producto.original_price | currency:'USD':true}}</p>
+      <p>Cantidad vendida: {{producto.sold_quantity}}</p>
+      <p>Stock: {{producto.available_quantity}}</p>
 
 
-  </ion-card-content>
-</ion-card>
+    </ion-card-content>
+  </ion-card>
 
+  <ng-template #imgML>
+      <img src="assets/img/mercadoLibre.png">
+  </ng-template>
 
   <button ion-button block color="dark" (click)="regresar()">
     Regresar

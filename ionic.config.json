@@ -2,5 +2,7 @@
   "name": "MercadoSearchIonic",
   "app_id": "4949abad",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {
+    "cordova": {}
+  }
 }
